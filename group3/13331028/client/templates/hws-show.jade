@@ -1,0 +1,21 @@
+template(name="hwsShow")
+	ul
+		li
+			a.del-hw delete this homework
+		li
+			a.sub-hw submit your homework
+	
+	h1.text-center.login-title Welcome #{username}. Homework #{name} is as follows :
+		div.signup-wall
+			dl.user-details(style="text-align: left")
+				dt [request]
+				dd
+					textarea(rows="10", cols="40", type="text", name="request", placeholder="hw request")= request
+				dt [deadline]
+				dd
+					input(type="text", name="deadline", placeholder="hw deadline", value="#{deadline}")
+		with _id	
+			each stuhwList this
+				+stuhwShow
+			else
+				p no hw from student yet.

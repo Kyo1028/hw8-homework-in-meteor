@@ -1,0 +1,12 @@
+template(name="stuhwShow")
+	hr
+	dl.user-details(style="text-align: left")
+	dt [homework from]
+	dd
+		span #{sname}
+	dt [homework content]
+	dd
+		textarea(rows="10", cols="40", type="text", name="content", placeholder="stu hw content")= content
+	dt [grade]
+	dd
+		input(type="text", name="grade", placeholder="stu hw grade", value="#{grade}")
